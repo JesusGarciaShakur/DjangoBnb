@@ -21,7 +21,7 @@ const PropertyDetailPage = () => {
                     <hr />
                     <div className="py-6 flex items-center space-x-4">
                         <Image 
-                        src='/profile_pic_1.jpg'
+                        src='/profile_pic_1.jpeg'
                         width={50}
                         height={50}
                         className="rounded-full"
