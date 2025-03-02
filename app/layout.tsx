@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/navbar/Navbar"
+import Modal from "./components/modals/Modal";
 
-const inter = Inter({ subsets: ["latin"]});
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "DjangoBnb",
@@ -15,14 +16,23 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const content = (
+      <p>Modal content</p>
+  );
   return (
     <html lang="en">
       <body className={inter.className}>
         <div className="pt-32">
-        <Navbar />
-        {children}
+          <Navbar />
+          {children}
         </div>
-        </body>
+      </body>
     </html>
   );
 }
+
+{/* <Modal
+label="Modal test"
+content={content}
+isOpen={false}
+/> */}
