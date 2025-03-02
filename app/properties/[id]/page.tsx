@@ -19,8 +19,8 @@ const PropertyDetailPage = () => {
                             4 guests -  2 bedrooms -1 bathroom
                         </span>
                     <hr />
-                    <div className="py-6 flex items-center space-x-4">
-                        <Image 
+                    <div className="py-6 flex items-center space-x-4 relative">
+                        <Image
                         src='/profile_pic_1.jpeg'
                         width={50}
                         height={50}
