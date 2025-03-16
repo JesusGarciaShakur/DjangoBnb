@@ -9,7 +9,7 @@ const MyPropertiesPage = async() => {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         <PropertyList 
-                            favorites={true}
+                            landlord_id={userId}
                         />
                     </div>
             </main>
