@@ -53,7 +53,7 @@ const ConversationDetail: React.FC<ConversationDetailProps> = ({
     const sendMessage = async () => {
         console.log('mesajito enviado')
         sendJsonMessage({
-            event: "chat_message",
+            event: 'chat_message',
             data:{
                 body: newMessage,
                 //name: 'juanito',
@@ -61,8 +61,8 @@ const ConversationDetail: React.FC<ConversationDetailProps> = ({
                 sent_to_id: otherUser?.id,
                 conversation_id: conversation.id
             }
-        })
-        setNewMessage('')
+        });
+        setNewMessage('');
 
         setTimeout(() => {
             scrollToBottom()
@@ -80,12 +80,13 @@ const ConversationDetail: React.FC<ConversationDetailProps> = ({
         <>
             <div 
                 ref={messagesDiv}
-                className="max-h-[400px] overflow-auto flex flex-col space-y-4">
+                className="max-h-[400px] overflow-auto flex flex-col space-y-4"
+            >
                 
                 {realtimeMessages.map((message, index) => (
                     <div
                         key={index}
-                        className={`w-[80%]py-4 px-6 rounded-xl ${message.name == myUser?.name ? 'ml-[20%] bg-blue-200' : 'bg-gray-200'}`}
+                        className={`w-[80%]py-4 px-6 rounded-xl ${message.name === myUser?.name ? 'ml-[20%] bg-blue-200' : 'bg-gray-200'}`}
                     >
                         <p className="font-bold text-gray-500">{message.name}</p>
                         <p>{message.body}</p>
